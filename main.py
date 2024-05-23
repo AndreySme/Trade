@@ -1,5 +1,4 @@
 import streamlit as st
-import numpy as np
 
 def volume(high=0, intermediate=0, low=0, volume=0):
     # разница верхней цены и промежуточной цены
@@ -28,15 +27,25 @@ def volume(high=0, intermediate=0, low=0, volume=0):
     volume_40_percent = volume_percent * 0.4
     # объем, на который необходимо совершить сделку по промежуточной цене
     volume_60_percent = volume - volume_40
+
+    return volume_40_percent, volume_60_percent, volume_residue
     
     
 high = st.text_input(label='Введите верхнюю цену')
-avr = st.text_input(label='Введите следующую цену')
+intermediate = st.text_input(label='Введите промежуточную цену')
 low = st.text_input(label='Введите нижнюю цену')
+volume = st.text_input(label='Введите объем капитала')
 
 btn = st.button(label='Выполнить', type="primary")
 
-result = float(high) + float(low)
+
 if btn:
-    st.write(result)
+    volume_high, volume_intermediate, volume_low = volume(high=float(high), 
+                                                          intermediate=float(intermediate), 
+                                                          low=float(low),
+                                                          volume=float(volume))
+    
+    st.write(f"Первая покупка по {high} на {volume_high}\n
+    Вторая покупка по {intermediate} на {volume_intermediate}\n
+    Третья покупка по {low} на {volume_low}")
 
