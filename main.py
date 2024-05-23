@@ -5,7 +5,8 @@ avr = st.text_input(label='Введите следующую цену')
 low = st.text_input(label='Введите нижнюю цену')
 
 btn = st.button(label='Выполнить', type="primary")
-result = high + avr
+high = int(high)
+result = high 
 if btn:
-    st.write(type(high))
+    st.write(result)
 
