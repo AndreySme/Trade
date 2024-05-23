@@ -45,7 +45,7 @@ if btn:
                                                           low=float(low),
                                                           volume=float(volume))
     
-    st.write(f"Первая покупка по {high} на {volume_high}\n
-    Вторая покупка по {intermediate} на {volume_intermediate}\n
-    Третья покупка по {low} на {volume_low}")
+    st.write(f"Первая покупка по", high, "на", volume_high)
+    st.write("Вторая покупка по")
+    st.write("Третья покупка по")
 
