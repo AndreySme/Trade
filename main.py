@@ -6,7 +6,7 @@ avr = st.text_input(label='Введите следующую цену')
 low = st.text_input(label='Введите нижнюю цену')
 
 btn = st.button(label='Выполнить', type="primary")
-result = np.astype(high, np.int32)
+result =float(high)
 if btn:
     st.write(result)
 
