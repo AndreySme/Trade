@@ -1,11 +1,9 @@
 import streamlit as st
 
+high = float(st.text_input(label='Введите верхнюю цену'))
+avr = float(st.text_input(label='Введите следующую цену'))
+low = float(st.text_input(label='Введите нижнюю цену'))
 
+result = high
+st.write(result)
 
-st.write('Hello')
-st.write('Загрузите')
-st.write('Трейдинг - это круто!')
-st.text('hello world')
-st.text_input(label='Введите верхнюю цену')
-st.text_input(label='Введите следующую цену')
-st.text_input(label='Введите нижнюю цену')
