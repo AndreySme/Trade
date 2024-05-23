@@ -37,13 +37,16 @@ low = st.text_input(label='Введите нижнюю цену')
 volume = st.text_input(label='Введите объем капитала')
 
 btn = st.button(label='Выполнить', type="primary")
-
+high=float(high)
+intermediate=float(intermediate)
+low=float(low)
+volume=float(volume)
 
 if btn:
-    volume_high, volume_intermediate, volume_low = volume(high=float(high), 
-                                                          intermediate=float(intermediate), 
-                                                          low=float(low),
-                                                          volume=float(volume))
+    volume_high, volume_intermediate, volume_low = volume(high=high, 
+                                                          intermediate=intermediate, 
+                                                          low=low,
+                                                          volume=volume)
     
     st.write(f"Первая покупка по", high, "на", volume_high)
     st.write("Вторая покупка по")
