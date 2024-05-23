@@ -2,7 +2,7 @@ import streamlit as st
 
 def find_volume(high=0, intermediate=0, low=0, volume=0):
     # разница верхней цены и промежуточной цены
-    diff_high_intermediate = high - between
+    diff_high_intermediate = high - intermediate
     # 40% от разницы верхней цены и промежуточной цены
     diff_40 = diff_high_intermediate * 0.4
     # цена после усреднения
