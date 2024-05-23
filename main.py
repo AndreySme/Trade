@@ -37,10 +37,14 @@ low = st.text_input(label='Введите нижнюю цену')
 volume = st.text_input(label='Введите объем капитала')
 
 btn = st.button(label='Выполнить', type="primary")
-high=float(high)
-intermediate=float(intermediate)
-low=float(low)
-volume=float(volume)
+if high:
+    high=float(high)
+if intermediate:
+    intermediate=float(intermediate)
+if low:
+    low=float(low)
+if volume:
+    volume=float(volume)
 
 if btn:
     volume_high, volume_intermediate, volume_low = find_volume(high=high, 
