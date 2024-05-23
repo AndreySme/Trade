@@ -1,10 +1,8 @@
-
-
 import streamlit as st
 
-st.button("Reset", type="primary")
-if st.button("Say hello"):
-    st.write("Why hello there")
-else:
-    st.write("Goodbye")
+high = st.text_input(label='Введите верхнюю цену')
+avr = st.text_input(label='Введите следующую цену')
+low = st.text_input(label='Введите нижнюю цену')
+if st.button(label='Выполнить', type="primary")
+    st.write(high)
 
