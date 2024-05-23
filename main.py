@@ -7,5 +7,5 @@ btn = st.button(label='Выполнить', on_click=True)
 if btn:
   st.write(high)
 
-st.write(type(result))
+
 
