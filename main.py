@@ -1,6 +1,6 @@
 import streamlit as st
 
-def volume(high=0, intermediate=0, low=0, volume=0):
+def find_volume(high=0, intermediate=0, low=0, volume=0):
     # разница верхней цены и промежуточной цены
     diff_high_intermediate = high - between
     # 40% от разницы верхней цены и промежуточной цены
@@ -43,7 +43,7 @@ low=float(low)
 volume=float(volume)
 
 if btn:
-    volume_high, volume_intermediate, volume_low = volume(high=high, 
+    volume_high, volume_intermediate, volume_low = find_volume(high=high, 
                                                           intermediate=intermediate, 
                                                           low=low,
                                                           volume=volume)
