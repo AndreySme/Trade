@@ -26,7 +26,7 @@ def find_volume(high=0, intermediate=0, low=0, volume=0):
     # объем, на который необходимо совершить сделку по верхней цене
     volume_40_percent = volume_percent * 0.4
     # объем, на который необходимо совершить сделку по промежуточной цене
-    volume_60_percent = volume - volume_40
+    volume_60_percent = volume - volume_40_percent
 
     return volume_40_percent, volume_60_percent, volume_residue
     
