@@ -30,7 +30,7 @@ def find_volume(high=0, intermediate=0, low=0, volume=0):
 
     return volume_40_percent, volume_60_percent, volume_residue
     
-st.header('Расчет объемов для усреднений цены', divider='rainbow')
+st.header('Расчет объемов для усреднения цены', divider='rainbow')
 high = st.text_input(label='Введите верхнюю цену')
 intermediate = st.text_input(label='Введите промежуточную цену')
 low = st.text_input(label='Введите нижнюю цену')
